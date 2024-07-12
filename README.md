@@ -1,6 +1,5 @@
 # yuoj-frontend
 
-gaigaigai
 
 ### 快速根据后端生成代码
 ```shell

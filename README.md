@@ -1,5 +1,14 @@
 # yuoj-frontend
 
+### 快速根据后端生成代码
+```shell
+openapi --input http://localhost:8121/api/v2/api-docs --output ./generated --client axios
+```
+### alibaba微服务
+```shell
+https://sca.aliyun.com/docs/2023/overview/what-is-sca/
+```
+
 ## Project setup
 ```
 npm install
@@ -264,4 +273,49 @@ const route=useRoute();
     </template>
   </div>
 </template>
+```
+
+```
+markdown插件安装
+1.npm i @bytemd/vue-next
+npm i @bytemd/plugin-highlight @bytemd/plugin-gfm
+
+代码编辑器安装
+1.https://github.com/microsoft/monaco-editor
+npm install monaco-editor
+webpack.config.js=>vue.config.js
+2.https://github.com/microsoft/monaco-editor/blob/main/docs/integrate-esm.md
+
+根据后端接口生成前端代码
+openapi --input http://localhost:8121/api/v2/api-docs --output ./generated --client axios
+
+新建vue文件指定结构
+setting->Live Templates->新建Template Group->在新建的目录下再新建Live Template
+将这段代码输入
+<template>
+  <div id="$ID$"></div>
+</template>
+
+<script setup lang="ts">
+$END$;
+</script>
+
+<style scoped>
+#$ID$ {
+}
+</style>
+->点击Edit Variables->设置ID为camelCase(fileNameWithoutExtension())
+->点击Define->设置仅在vue文件下->创建新文件后，输入myvuepage，直接构建模板
+
+
+3.与后端交互
+services文件夹,找到对应的Controller,找到里面的请求参数.
+
+4.<a-space>
+将组件放在同一行,并自动加上间距
+
+5.AddQuestionView还能做到一页两用,强
+
+6.时间组件库
+npm install moment --save
 ```

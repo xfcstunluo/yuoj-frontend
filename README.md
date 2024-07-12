@@ -1,5 +1,7 @@
 # yuoj-frontend
 
+gaigaigai
+
 ### 快速根据后端生成代码
 ```shell
 openapi --input http://localhost:8121/api/v2/api-docs --output ./generated --client axios
